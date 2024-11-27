@@ -18,8 +18,8 @@ pipeline {
                 script {
                     def appName = 'apimicro'
                     def imageTag = "${appName}"
-                    //bat  "docker stop ${appName} || true"
-                    //bat  "docker rm ${appName} || true"
+                    bat  "docker stop ${appName} || true"
+                    bat  "docker rm ${appName} || true"
                     // Executar o novo container
                     bat "docker run -d --name ${appName} -p 3010:3010 ${imageTag}"
                 }
